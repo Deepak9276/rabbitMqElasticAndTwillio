@@ -1,0 +1,15 @@
+syntax = 'proto3';
+
+package students;
+
+service StudentProcedures {
+    rpc getStudentById (InputData) return (stream ModelResult) {}
+}
+
+message InputData {
+    string id = 1;
+}
+
+message ModelResult {
+    string data = 1;
+}
